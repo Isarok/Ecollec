@@ -1,5 +1,6 @@
+import Layaout from "../../Components/Layaout";
 const MyOrders = () => {
-  return <div className="bg-orange-600">MyOrders</div>;
+  return <Layaout>MyOrders</Layaout>;
 };
 
 export default MyOrders;

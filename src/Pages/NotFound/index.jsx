@@ -1,5 +1,6 @@
+import Layaout from "../../Components/Layaout";
 const NotFound = () => {
-  return <div className="bg-orange-600">NotFound</div>;
+  return <Layaout>NotFound</Layaout>;
 };
 
 export default NotFound;

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const activeStyle = "underline underline-offset-4";
   return (
-    <nav className="flex justify-between items-center fixed z-10 w-full py-5 px-8 text-sm font-light">
+    <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light bg-orange-600">
       <ul className="flex gap-4 items-center">
         <li className="font-bold text-lg">
           <NavLink to="/">Shopi</NavLink>
@@ -58,7 +58,7 @@ const Navbar = () => {
         </li>
       </ul>
       <ul className="flex gap-4 items-center">
-        <li className="text-orange-600">YetLi@gmail.com</li>
+        <li className="text-orange-200">YetLi@gmail.com</li>
         <li>
           <NavLink
             to="/my-orders"

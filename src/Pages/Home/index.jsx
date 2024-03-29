@@ -1,5 +1,6 @@
+import Layaout from "../../Components/Layaout";
 const Home = () => {
-  return <div className="bg-orange-600">Home</div>;
+  return <Layaout>Home</Layaout>;
 };
 
 export default Home;

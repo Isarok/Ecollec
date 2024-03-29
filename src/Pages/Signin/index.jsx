@@ -1,5 +1,6 @@
+import Layaout from "../../Components/Layaout";
 const SignIn = () => {
-  return <div className="bg-orange-600">SignIn</div>;
+  return <Layaout>SignIn</Layaout>;
 };
 
 export default SignIn;
