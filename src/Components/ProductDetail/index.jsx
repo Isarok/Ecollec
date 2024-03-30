@@ -5,13 +5,12 @@ import "./style.css";
 
 const ProductDetail = () => {
   const context = useContext(ShoppingCartContext);
-  console.log("PRODUCT SHOW", context.productShow);
 
   return (
     <aside
       className={`${
         context.isProductDetailOpen ? "flex" : "hidden"
-      } product-detail flex-col fixed right-0 border-orange-800 rounded-lg bg-orange-200`}
+      } checkout-side-menu flex-col fixed right-0 border-orange-800 rounded-lg bg-orange-200`}
     >
       <div className="flex justify-between items-center p-6">
         <h2 className="text-xl font-medium">Detail</h2>
