@@ -6,6 +6,20 @@ import { ShoppingCartContext } from "../../Context";
 const Home = () => {
   const context = useContext(ShoppingCartContext);
 
+  const renderView = () => {
+    if (context.searchByTitle?.length > 0) {
+      if (context.filteredItems?.length > 0) {
+        return context.filteredItems?.map((item) => (
+          <Card key={item.id} data={item} />
+        ));
+      } else {
+        return <div>This tresour is not found</div>;
+      }
+    } else {
+      return context.items?.map((item) => <Card key={item.id} data={item} />);
+    }
+  };
+
   return (
     <Layaout>
       <div className="flex items-center justify-center relative w-full mb-4">
@@ -20,9 +34,7 @@ const Home = () => {
         onChange={(event) => context.setSearchByTitle(event.target.value)}
       />
       <div className="grid grid-cols-4 w-full max-w-screen-lg gap-4">
-        {context.items?.map((item) => (
-          <Card key={item.id} data={item} />
-        ))}
+        {renderView()}
       </div>
       <ProductDetail />
     </Layaout>
