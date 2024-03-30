@@ -9,7 +9,7 @@ const MyOrders = () => {
   return (
     <Layaout>
       <div className="flex items-center justify-center relative w-80 mb-4">
-        <h1>MyOrders</h1>
+        <h1 className="text-xl font-medium mb-4">MyOrders</h1>
       </div>
 
       {context.order?.map((order, index) => (
