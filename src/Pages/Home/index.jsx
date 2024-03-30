@@ -1,21 +1,26 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import Layaout from "../../Components/Layaout";
 import Card from "../../Components/Card";
 import ProductDetail from "../../Components/ProductDetail";
+import { ShoppingCartContext } from "../../Context";
 const Home = () => {
-  const [items, setItems] = useState(null);
-
-  useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products").then((response) =>
-      response.json().then((data) => setItems(data))
-    );
-  }, []);
+  const context = useContext(ShoppingCartContext);
 
   return (
     <Layaout>
-      Home
+      <div className="flex items-center justify-center relative w-full mb-4">
+        <h1 className="text-xl font-medium mb-4">
+          Dive into a Treasure Trove of Unique Finds!
+        </h1>
+      </div>
+      <input
+        type="text"
+        placeholder="Find you tresor..."
+        className="rounded-lg border border-orange-500 w-80 p-4 mb-4 focus:outline-none"
+        onChange={(event) => context.setSearchByTitle(event.target.value)}
+      />
       <div className="grid grid-cols-4 w-full max-w-screen-lg gap-4">
-        {items?.map((item) => (
+        {context.items?.map((item) => (
           <Card key={item.id} data={item} />
         ))}
       </div>
