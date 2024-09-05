@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <Layaout>
-      <div className="flex items-center justify-center relative w-full mb-4">
+      <div className="flex items-center justify-center relative w-full mb-2">
         <h1 className="text-xl font-medium mb-4">
           Dive into a Treasure Trove of Unique Finds!
         </h1>
@@ -30,7 +30,7 @@ const Home = () => {
       <input
         type="text"
         placeholder="Find you tresor..."
-        className="rounded-lg border border-orange-500 w-80 p-4 mb-4 focus:outline-none"
+        className="rounded-lg border border-orange-500 w-60 p-2 mb-8 focus:outline-none"
         onChange={(event) => context.setSearchByTitle(event.target.value)}
       />
       <div className="grid grid-cols-4 w-full max-w-screen-lg gap-4">

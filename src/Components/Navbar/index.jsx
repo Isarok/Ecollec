@@ -2,16 +2,13 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import { ShoppingCartContext } from "../../Context";
-
+import img from "../../../public/EcollecN.svg";
 const Navbar = () => {
   const context = useContext(ShoppingCartContext);
   const activeStyle = "underline underline-offset-4";
   return (
-    <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light bg-orange-600">
-      <ul className="flex gap-4 items-center">
-        <li className="font-bold text-lg">
-          <NavLink to="/">Shopi</NavLink>
-        </li>
+    <nav className="flex justify-around items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light bg-orange-600">
+      <ul className="flex gap-4 ml-8 items-center">
         <li>
           <NavLink
             to="/"
@@ -66,6 +63,16 @@ const Navbar = () => {
             Others
           </NavLink>
         </li>
+        <ul className="flex gap-8 ml-28 items-center">
+      <li className="font-bold text-lg">
+          <NavLink to="/">
+            <img 
+            src={img}
+            alt="logo"
+            className="max-w-[200px] max-h-[40px] "/>
+            </NavLink>
+        </li>
+        </ul>
       </ul>
       <ul className="flex gap-4 items-center">
         <li className="text-orange-200">YetLi@gmail.com</li>
