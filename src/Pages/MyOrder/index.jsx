@@ -24,7 +24,7 @@ const MyOrder = () => {
             key={product.id}
             id={product.id}
             title={product.title}
-            imageUrl={product.images}
+            image={product.image}
             price={product.price}
           />
         ))}

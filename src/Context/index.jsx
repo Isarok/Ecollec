@@ -36,35 +36,35 @@ export const ShoppingCartProvider = ({ children }) => {
   const [searchByCategory, setSearchByCategory] = useState(null);
 
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products").then((response) =>
+    fetch("https://fakestoreapi.com/products").then((response) =>
       response.json().then((data) => setItems(data))
     );
   }, []);
 
   const filteredItemsByTitle = (items, searchByTitle) => {
     return items.filter((item) =>
-      item.title.toLowerCase().includes(searchByTitle.toLowerCase())
+      item.title().includes(searchByTitle())
     );
   };
 
   const filteredItemsByCategory = (items, searchByCategory) => {
     return items.filter((item) =>
-      item.category.name.toLowerCase().includes(searchByCategory.toLowerCase())
+      item.category().includes(searchByCategory())
     );
   };
 
   const filterBy = (searchType, items, searchByTitle, searchByCategory) => {
     if (searchType === "BY_TITLE") {
-      return filteredItemsByTitle(items, searchByTitle);
+      return filteredItemsByTitle(items, searchByTitle)
     }
 
     if (searchType === "BY_CATEGORY") {
-      return filteredItemsByCategory(items, searchByCategory);
+      return filteredItemsByCategory(items, searchByCategory)
     }
     if (searchType === "BY_TITLE_AND_CATEGORY") {
-      return filteredItemsByCategory(items, searchByCategory).filter((item) =>
-        item.title.toLowerCase().includes(searchByTitle.toLowerCase())
-      );
+      return filteredItemsByCategory(items, searchByCategory).filter(item =>
+        item.title().includes(searchByTitle())
+      )
     }
 
     if (!searchType) {

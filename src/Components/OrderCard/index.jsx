@@ -1,7 +1,7 @@
 import { XMarkIcon } from "@heroicons/react/24/solid";
 
 const OrderCard = (props) => {
-  const { id, title, imageUrl, price, handleDelete } = props;
+  const { id, title, image, price, handleDelete } = props;
   let renderXmarkIcon;
   if (handleDelete) {
     renderXmarkIcon = (
@@ -18,7 +18,7 @@ const OrderCard = (props) => {
         <figure className="w-12 h-12">
           <img
             className="w-full h-full rounded-lg object-cover"
-            src={imageUrl}
+            src={image}
             alt={title}
           />
         </figure>
