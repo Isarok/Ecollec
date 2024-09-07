@@ -14,7 +14,7 @@ const AppRoutes = () => {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/women's clothing", element: <Home /> },
-    { path: "men's clothing", element: <Home /> },
+    { path: "/men's clothing", element: <Home /> },
     { path: "/electronics", element: <Home /> },
     { path: "/jewelery", element: <Home /> },
     //{ path: "/toys", element: <Home /> },

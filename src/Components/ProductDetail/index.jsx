@@ -18,14 +18,15 @@ const ProductDetail = () => {
           <XMarkIcon className="w-6 h-6 cursor-pointer" />
         </div>
       </div>
-      <figure className="w-full px-6">
+      <figure className="w-full h-2/5  ">
         <img
-          className="w-full h-full rounded-lg"
+          className="w-4/5 h-5/6 rounded-lg m-auto border border-orange-800
+                    lg:w-90% lg:h-full lg:m-auto"
           src={context.productShow.image}
           alt={context.productShow.title}
         />
       </figure>
-      <p className="flex flex-col p-6 ">
+      <p className="flex flex-col p-4 ">
         <span className="font-medium text-2xl mb-2">
           ${context.productShow.price}
         </span>
