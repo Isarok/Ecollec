@@ -41,7 +41,8 @@ const Home = () => {
       />
 
       {/* Mostrar productos */}
-      <div className="grid grid-cols-4 w-full max-w-screen-lg gap-8">
+      <div className="grid grid-cols-1 w-full max-w-screen-lg gap-8
+                      md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 justify-items-center">
         {renderView()}
       </div>
 
